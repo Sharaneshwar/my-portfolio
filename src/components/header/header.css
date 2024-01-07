@@ -17,7 +17,7 @@
 
 .nav__logo,
 .nav__toggle {
-    color: var(--title-color);
+    color: var(--title-color-dark);
     font-weight: var(--font-medium);
 }
 
@@ -26,14 +26,34 @@
     column-gap: 2rem;
 }
 
-.nav__link {
+.nav__link, .nav__link:link, .nav__link:visited{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: var(--small-font-size);
-    color: var(--title-color);
+    color: var(--text-color);
     font-weight: var(--font-medium);
     transition: .3s;
+    position: relative;
+    padding-bottom: 4px;
+    text-decoration: none;
+}
+
+.nav__link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(90deg, var(--title-color-light), var(--title-color-light));
+    background-size: 0 2px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size .3s ease-in;
+}
+
+.nav__link:hover::before {
+  background-size: 100% 2px;
 }
 
 .nav__icon,
@@ -45,7 +65,7 @@
 /* Active link */
 .active-link,
 .nav__link:hover {
-    color: var(--title-color-dark);
+    color: var(--title-color-light) !important;
 }
 
 /*=============== BREAKPOINTS ===============*/

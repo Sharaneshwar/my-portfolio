@@ -16,17 +16,17 @@
 }
 
 .home__social-icon {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
     color: var(--title-color);
 }
 
 .home__social-icon:hover {
+    transition: .1s ease-in;
     color: var(--title-color-dark);
-}
-
-.home__social-icon img {
-    width: 1.5rem;
-    height: 1.5rem;
 }
 
 .home__title {
@@ -65,12 +65,12 @@
 }
 
 .home__img {
-    background: url(../../assets//profile-pic.png);
+    background: url(../../assets//profile-pic-complete.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     box-shadow: inset 0 0 0 6px rgb(255 255 255 / 60%);
     order: 1;
     justify-self: center;
@@ -172,6 +172,7 @@
         box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
         width: 200px;
         height: 200px;
+        margin-left: 20px;
     }
 
     .home__data {
@@ -191,7 +192,8 @@
 @media screen and (max-width: 350px) {
     .home__img {
         width: 180px;
-        height: 180px;
+        height: 180px;        
+        margin-left: 20px;
     }
 
     .home__hand {

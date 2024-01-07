@@ -1,24 +1,29 @@
 import React from 'react'
-import hackerrank from '../../assets/hackerrank.png'
-import twitter from '../../assets/twitter.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXTwitter, faHackerrank, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import leetcode from '../../assets/leetcode.svg'
 
 const Social = () => {
     return (
         <div className="home__social">
             <a href="https://github.com/Sharaneshwar" className="home__social-icon" target="_blank" rel="noreferrer">
-                <i className="uil uil-github-alt"></i>
+                <FontAwesomeIcon icon={faGithub} />
             </a>
 
             <a href="https://www.linkedin.com/in/sharaneshwar-punjal/" className="home__social-icon" target="_blank" rel="noreferrer">
-                <i className="uil uil-linkedin-alt"></i>
+                <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
 
             <a href="https://twitter.com/Sharan_2208" className="home__social-icon" target="_blank" rel="noreferrer">
-                <img src={twitter} alt='twitter' />
+                <FontAwesomeIcon icon={faXTwitter} />
             </a>
 
             <a href="https://www.hackerrank.com/sharaneshwar" className="home__social-icon" target="_blank" rel="noreferrer">
-                <img src={hackerrank} alt='hackerrank' />
+                <FontAwesomeIcon icon={faHackerrank} />
+            </a>
+
+            <a href="https://www.leetcode.com/sharaneshwar" className="home__social-icon" target="_blank" rel="noreferrer">
+                <img src={leetcode} alt="leetcode" />
             </a>
 
         </div>

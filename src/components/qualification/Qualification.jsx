@@ -17,14 +17,13 @@ const Qualification = () => {
                     <div className={
                         toggleState === 1 ? "qualification__button qualification__active button--flex" : "qualification__button button--flex"
                     }
-                    onClick={() => toggleTab(1)}
-                    >
-                        <i className="uil uil-graduation-cap qualification-icon"></i> Education
+                        onClick={() => toggleTab(1)}
+                    ><i className="uil uil-graduation-cap qualification-icon"></i> Education
                     </div>
                     <div className={
                         toggleState === 2 ? "qualification__button qualification__active button--flex" : "qualification__button button--flex"
                     }
-                    onClick={() => toggleTab(2)}
+                        onClick={() => toggleTab(2)}
                     >
                         <i className="uil uil-briefcase-alt qualification-icon"></i> Experience
                     </div>
