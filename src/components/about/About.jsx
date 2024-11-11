@@ -1,7 +1,7 @@
 import React from 'react'
 import './about.css'
 import AboutImg from '../../assets/profile-pic-complete.jpg'
-import CV from "../../assets/Sharaneshwar-CV.pdf"
+import CV from "../../assets/Sharaneshwar Resume.pdf"
 import Info from './Info'
 import files from '../../assets/files.svg'
 
@@ -17,7 +17,7 @@ const About = () => {
 				<div className="about__data">
 					<Info />
 
-					<p className="about__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo repudiandae sapiente fugiat voluptatum quidem, earum dolore aut consequatur reprehenderit distinctio officia, laborum labore quis veritatis saepe? Obcaecati veniam fugit, sequi soluta corrupti nesciunt placeat nemo?</p>
+					<p className="about__description">I am from Solapur, Maharashtra, highly skilled in Java and have created unique projects in web development using MERN Stack. I actively solve problems on platforms like HackerRank, LeetCode and CodeChef thereby being able to deliver innovative and efficient solutions day by day. Do checkout my projects on GitHub!</p>
 
 					<a download="Sharaneshwar CV" href={CV} className="button button--flex">
 						Download CV <img src={files} alt="files" />

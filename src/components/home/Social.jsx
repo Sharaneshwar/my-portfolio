@@ -7,7 +7,7 @@ const Social = () => {
     return (
         <div className="home__social">
             <a href="https://github.com/Sharaneshwar" className="home__social-icon" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faGithub} />
+                <FontAwesomeIcon icon={faGithub} />     
             </a>
 
             <a href="https://www.linkedin.com/in/sharaneshwar-punjal/" className="home__social-icon" target="_blank" rel="noreferrer">

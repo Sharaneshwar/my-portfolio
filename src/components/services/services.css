@@ -60,10 +60,10 @@
 }
 
 .services__modal-content {
-    width: 500px;
+    width: 700px;
     position: relative;
     background-color: var(--container-color);
-    padding: 4.5rem 2.5rem 2.5rem;
+    padding: 3.5rem 2.5rem 2.5rem;
     border-radius: 1.5rem;
 }
 
@@ -83,14 +83,15 @@
 
 .services__modal-title {
     font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
+    font-weight: 600;   
     margin-bottom: var(--mb-1);
 }
 
 .services__modal-description {
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-2);
-    padding: 0 3.5rem;
+    font-weight: 500;
+    /* padding: 0 3.5rem; */
 }
 
 .services__modal-services {
@@ -99,12 +100,17 @@
 
 .services__modal-service {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     column-gap: .5rem;
 }
 
-.services__modal-icon {
+.services__modal-service p {
+    line-height: 1.5;
+}
+
+.services__modal-service .services__modal-icon {
     color: var(--title-color);
+    margin-top: 2px;
     font-size: 1.1rem;
 }
 
