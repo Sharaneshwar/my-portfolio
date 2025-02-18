@@ -9,19 +9,19 @@ import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
 
 function App() {
-	return (
-		<>
-			<Header />
-			<main>
-				<Home />
-				<About />
-				<Skills />
-				<Services />
-				<Qualification />
-				<Contact />
-			</main>
-		</>
-	);
+  return (
+    <>
+      <Header />
+      <main>
+        <Home />
+        <About />
+        <Skills />
+        <Services />
+        <Qualification />
+        <Contact />
+      </main>
+    </>
+  );
 }
 
 export default App;
