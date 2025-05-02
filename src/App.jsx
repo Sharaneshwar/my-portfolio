@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
@@ -7,10 +7,24 @@ import Skills from './components/skills/Skills';
 import Services from './components/services/Services';
 import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
+import Loader from './components/loader/Loader.jsx';
+import AOS from 'aos';
+import '../node_modules/aos/dist/aos.css';
 
-function App() {
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init();
+    setInterval(() => {
+      setIsLoading(false);
+    }, 500);
+  }, []);
+
   return (
     <>
+      {isLoading ? <Loader /> : null}
+      <div className="gradient-container background"></div>
       <Header />
       <main>
         <Home />
@@ -18,7 +32,7 @@ function App() {
         <Skills />
         <Services />
         <Qualification />
-        <Contact />
+        {/* <Contact /> */}
       </main>
     </>
   );

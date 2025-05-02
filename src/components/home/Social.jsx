@@ -18,13 +18,15 @@ const Social = () => {
                 <FontAwesomeIcon icon={faXTwitter} />
             </a>
 
+            <a href="https://www.leetcode.com/sharaneshwar" className="home__social-icon" target="_blank" rel="noreferrer">
+                <img src={leetcode} alt="leetcode" />
+            </a>
+
             <a href="https://www.hackerrank.com/sharaneshwar" className="home__social-icon" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faHackerrank} />
             </a>
 
-            <a href="https://www.leetcode.com/sharaneshwar" className="home__social-icon" target="_blank" rel="noreferrer">
-                <img src={leetcode} alt="leetcode" />
-            </a>
+            
 
         </div>
     )

@@ -17,7 +17,7 @@ const About = () => {
 				<div className="about__data">
 					<Info />
 
-					<p className="about__description">I am from Solapur, Maharashtra, highly skilled in Java and have created unique projects in web development using MERN Stack. I actively solve problems on platforms like HackerRank, LeetCode and CodeChef thereby being able to deliver innovative and efficient solutions day by day. Do checkout my projects on GitHub!</p>
+					<p className="about__description">I am currently pursuing my bachelor's degree in Computer Science and Engineering at Walchand College of Engineering, Sangli, have completed my schooling at St. Thomas English Medium School, Solapur from ICSE board and my Diploma in Computer Technology from Government Polytechnic, Solapur. My hometown is Solapur, Maharashtra. I am highly skilled in Java and have created unique projects in web development using MERN Stack also now transitioning to Next,js and much advanced frameworks. I actively solve problems on platforms like HackerRank and LeetCode thereby being able to deliver innovative and efficient solutions day by day. Do checkout my projects on GitHub!</p>
 
 					<a download="Sharaneshwar CV" href={CV} className="button button--flex">
 						Download CV <img src={files} alt="files" />

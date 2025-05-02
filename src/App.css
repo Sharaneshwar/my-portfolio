@@ -5,221 +5,350 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3rem;
+	--header-height: 3rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 202;
-  --sat: 100%;
-  --title-color: hsl(var(--hue), var(--sat), 18%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --title-color-light: hsl(var(--hue), var(--sat), 30%);
-  --text-color: hsl(var(--hue), var(--sat), 0%);
-  --body-color: hsl(var(--hue), var(--sat), 99%);
-  --container-color: #fff;
+	/*========== Colors ==========*/
+	/*Color mode HSL(hue, saturation, lightness)*/
+	--hue: 202;
+	--sat: 100%;
+	--title-color: hsl(var(--hue), var(--sat), 18%);
+	--title-color-dark: hsl(var(--hue), var(--sat), 0%);
+	--title-color-light: hsl(var(--hue), var(--sat), 30%);
+	--text-color: hsl(var(--hue), var(--sat), 0%);
+	--body-color: hsl(var(--hue), var(--sat), 99%);
+	--container-color: #fff;
 
-  /*========== Font and typography ==========*/
-  --body-font: "Plus Jakarta Sans", sans-serif;
+	/*========== Font and typography ==========*/
+	--body-font: "Plus Jakarta Sans", sans-serif;
 
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --big-font-size: 3rem;
-  --h1-font-size: 2.25rem;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1.25rem;
-  --normal-font-size: 1.1rem;
-  --small-font-size: 1rem;
-  --smaller-font-size: 0.9rem;
-  --tiny-font-size: 0.7rem;
+	/*.5rem = 8px | 1rem = 16px ...*/
+	--big-font-size: 3rem;
+	--h1-font-size: 2.25rem;
+	--h2-font-size: 1.5rem;
+	--h3-font-size: 1.25rem;
+	--normal-font-size: 1.1rem;
+	--small-font-size: 1rem;
+	--smaller-font-size: 0.9rem;
+	--tiny-font-size: 0.7rem;
 
-  /*========== Font weight ==========*/
-  --font-normal: 500;
-  --font-medium: 600;
-  --font-semi-bold: 700;
-  --font-bold: 800;
+	/*========== Font weight ==========*/
+	--font-normal: 500;
+	--font-medium: 600;
+	--font-semi-bold: 700;
+	--font-bold: 800;
 
-  /*========== Margenes Bottom ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --mb-0-25: 0.25rem;
-  --mb-0-5: 0.5rem;
-  --mb-0-75: 0.75rem;
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2: 2rem;
-  --mb-2-5: 2.5rem;
-  --mb-3: 3rem;
+	/*========== Margenes Bottom ==========*/
+	/*.5rem = 8px | 1rem = 16px ...*/
+	--mb-0-25: 0.25rem;
+	--mb-0-5: 0.5rem;
+	--mb-0-75: 0.75rem;
+	--mb-1: 1rem;
+	--mb-1-5: 1.5rem;
+	--mb-2: 2rem;
+	--mb-2-5: 2.5rem;
+	--mb-3: 3rem;
 
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-  --z-modal: 1000;
+	/*========== z index ==========*/
+	--z-tooltip: 10;
+	--z-fixed: 50;
+	--z-modal: 100;
 }
 
 /* Responsive typography */
 @media screen and (max-width: 992px) {
-  :root {
-    --big-font-size: 2.75rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 0.938rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
-  }
+	:root {
+		--big-font-size: 2.75rem;
+		--h1-font-size: 1.85rem;
+		--h2-font-size: 1.35rem;
+		--h3-font-size: 1rem;
+		--normal-font-size: 1rem;
+		--small-font-size: 0.9rem;
+		--smaller-font-size: 0.75rem;
+	}
 }
 
 /*=============== BASE ===============*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	user-select: none;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;
 }
 
 body,
 button,
 input,
 textarea {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
 }
 
 body {
-  background-color: var(--body-color);
-  color: var(--text-color);
+	background-color: var(--body-color);
+	color: var(--text-color);
 }
 
 h1,
 h2,
 h3 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+	color: var(--title-color);
+	font-weight: var(--font-semi-bold);
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  text-decoration: none;
-  color: var(--title-color);
+	text-decoration: none;
+	color: var(--title-color);
 }
 
 button {
-  cursor: pointer;
-  border: none;
-  outline: none;
+	cursor: pointer;
+	border: none;
+	outline: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+:focus {
+    outline: none;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 6rem 0 2rem;
+	padding: 6rem 0 2rem;
 }
 
 .section__title {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
+	font-size: var(--h1-font-size);
+	color: var(--title-color);
+	font-weight: 800;
+	text-transform: uppercase;
 }
 
 .section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: 4rem;
+	display: block;
+	font-size: var(--small-font-size);
+	margin-bottom: 4rem;
 }
 
 .section__title,
 .section__subtitle {
-  text-align: center;
+	text-align: center;
 }
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 968px;
-  margin-left: auto;
-  margin-right: auto;
+	max-width: 968px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .grid {
-  display: grid;
-  gap: 1.5rem;
+	display: grid;
+	gap: 1.5rem;
 }
 
 /*=============== BUTTONS ===============*/
 .button {
-  display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
-  padding: 1.1rem 1.25rem;
-  border-radius: 1rem;
-  font-weight: var(--font-medium);
-  transition: .5s ease-in;
+	display: flex;
+	background-color: var(--title-color);
+	color: var(--container-color);
+	padding: .75rem 1.25rem;
+	border-radius: 50rem;
+	font-size: 16px;
+	font-weight: var(--font-medium);
+	transition: .3s ease-in-out;
+	align-items: center;
+	justify-content: center;
 }
 
 .button:hover {
-  border-radius: 50px;
-  background-color: var(--title-color-dark);
+	background-color: var(--title-color-dark);
 }
 
 .button__icon {
-  margin-left: var(--mb-0-5);
+	width: 22px;
+	margin-left: var(--mb-0-25);
 }
 
 .button--flex {
-  display: inline-flex;
-  align-items: center;
+	display: inline-flex;
+	align-items: center;
 }
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
-  .container {
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
-  }
+	.container {
+		margin-left: var(--mb-1-5);
+		margin-right: var(--mb-1-5);
+	}
 
-  .button {
-    padding: 1rem 1.75rem;
-  }
+	.button {
+		padding: 1rem 1.75rem;
+	}
 
-  .button__icon {
-    width: 22px;
-    height: 22px;
-  }
+	.button__icon {
+		width: 22px;
+		height: 22px;
+	}
 }
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
-  body {
-    margin: 0 0 var(--header-height) 0;
-  }
+	body {
+		margin: 0 0 var(--header-height) 0;
+	}
 
-  .section {
-    padding: 2rem 0 4rem;
-  }
+	.section {
+		padding: 2rem 0 4rem;
+	}
 
-  .section__subtitle {
-    margin-bottom: var(--mb-3);
-  }
+	.section__subtitle {
+		margin-bottom: var(--mb-3);
+	}
 }
 
 @media screen and (max-width: 576px) {}
 
 /* For small devices */
 @media screen and (max-width: 350px) {
-  :root {
-    --big-font-size: 2.25rem;
-  }
+	:root {
+		--big-font-size: 2.25rem;
+	}
 
-  .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
-  }
+	.container {
+		margin-left: var(--mb-1);
+		margin-right: var(--mb-1);
+	}
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -20;
+}
+
+@keyframes hero-gradient-animation {
+	0% {
+		--x-0: 0%;
+		--s-start-0: 3%;
+		--s-end-0: 79%;
+		--c-0: hsla(198, 41%, 91%, 1);
+		--y-0: 90%;
+		--x-1: 98%;
+		--c-1: hsla(202, 76%, 90%, 1);
+		--y-1: 35%;
+		--s-start-1: 3%;
+		--s-end-1: 79%;
+	}
+
+	100% {
+		--x-0: 24%;
+		--s-start-0: 4%;
+		--s-end-0: 67%;
+		--c-0: hsla(206, 0%, 100%, 1);
+		--y-0: 16%;
+		--x-1: 62%;
+		--c-1: hsla(217.05882352941202, 87%, 89%, 1);
+		--y-1: 100%;
+		--s-start-1: 4%;
+		--s-end-1: 67%;
+	}
+}
+
+@property --x-0 {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 0%
+}
+
+@property --s-start-0 {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 3%
+}
+
+@property --s-end-0 {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 79%
+}
+
+@property --c-0 {
+	syntax: '<color>';
+	inherits: false;
+	initial-value: hsla(198, 41%, 91%, 1)
+}
+
+@property --y-0 {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 90%
+}
+
+@property --x-1 {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 98%
+}
+
+@property --c-1 {
+	syntax: '<color>';
+	inherits: false;
+	initial-value: hsla(202, 76%, 90%, 1)
+}
+
+@property --y-1 {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 35%
+}
+
+@property --s-start-1 {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 3%
+}
+
+@property --s-end-1 {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 79%
+}
+
+.gradient-container {
+	--x-0: 0%;
+	--c-0: hsla(198, 41%, 91%, 1);
+	--y-0: 90%;
+	--x-1: 98%;
+	--c-1: hsla(202, 76%, 90%, 1);
+	--y-1: 35%;
+	;
+	background-color: hsla(263, 0%, 100%, 1);
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 2021 2021' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1));
+	animation: hero-gradient-animation 10s linear infinite alternate;
+	background-blend-mode: overlay, normal, normal;
 }

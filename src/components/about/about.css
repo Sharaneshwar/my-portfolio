@@ -1,11 +1,11 @@
 .about__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    column-gap: 4rem;
+    column-gap: 2rem;
 }
 
 .about__img {
-    width: 370px;
+    width: 380px;
     border-radius: 1.5rem;
     justify-self: center;
 }
@@ -45,6 +45,7 @@
     /* padding: 0 4rem 0 0; */
     margin-bottom: var(--mb-2-5);
     text-align: justify;
+    line-height: 1.5;
 }
 
 .about__data a img {
